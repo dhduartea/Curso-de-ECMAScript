@@ -59,3 +59,45 @@ console.log(education)
     //https://dev.to/sagar/three-dots---in-javascript-26ci
 
 //EJ6
+
+let name1 ="Karen";
+let age1 =24;
+    //es5
+obj1 ={name:name1, age:age1};
+console.log(obj1);
+    //es6
+obj2={name1, age1};
+console.log(obj2);
+
+//EJ7
+const names=[ {name:"Karen", age:24}, {name:"David", age:25}];
+let listNames=names.map(function (item) {
+    console.log(item.name);
+})
+
+let listNames2=names.map(item=>console.log(item.name));
+
+//EJ8
+
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if (true) {
+            resolve('hey')
+        } else {
+            reject('Ups')
+        }
+    })
+}
+
+helloPromise()
+    .then( response => console.log(response))
+    .catch(error => console.log(error));
+    
+    // Una promesa es un objeto que representa el resultado de una operación asíncrona y tiene 3 estados posibles:
+
+    // Pendiente.
+    // Resuelta.
+    // Rechazada.
+    // Tienen la particularidad de que se pueden encadenar (then), siendo el resultado de una promesa, los datos de entrada de otra posible función.
+    
+    // Las promesas mantienen un código más legible y mantenible que las callbacks, además tienen un mecanismo para la detección de errores (catch) que es posible usar en cualquier parte del flujo de datos.
