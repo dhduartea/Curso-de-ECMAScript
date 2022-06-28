@@ -1,0 +1,19 @@
+{
+  "name": "curso-de-ecmascript",
+  "version": "1.0.0",
+  "description": "Entendiendo ECMAScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhduartea/Curso-de-ECMAScript.git"
+  },
+  "author": "David Duarte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhduartea/Curso-de-ECMAScript/issues"
+  },
+  "homepage": "https://github.com/dhduartea/Curso-de-ECMAScript#readme"
+}
