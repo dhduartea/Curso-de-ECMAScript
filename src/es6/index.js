@@ -18,7 +18,7 @@ function newFunction2(name="David", age=32, country="Colombia") {
 newFunction2();
 newFunction2("Juan", 40, "MX");
 
-let hello="Hello";
+export let hello="Hello";
 let world="world!";
 let epicPhrase=hello+" "+world;
 console.log(epicPhrase);
@@ -101,3 +101,59 @@ helloPromise()
     // Tienen la particularidad de que se pueden encadenar (then), siendo el resultado de una promesa, los datos de entrada de otra posible función.
     
     // Las promesas mantienen un código más legible y mantenible que las callbacks, además tienen un mecanismo para la detección de errores (catch) que es posible usar en cualquier parte del flujo de datos.
+
+//EJ9-clases
+
+class calculator{
+    constructor(){
+        this.valueA=0;
+        this.valueB=0;
+    }
+    sum(valueA,valueB){
+        this.valueA=valueA;
+        this.valueB=valueB;
+        return this.valueA+this.valueB;
+    }
+    multiply=()=>(this.valueA*this.valueB)
+}
+const calc = new calculator();
+console.log(calc.sum(2,4));
+console.log(calc.multiply(2,4));
+
+    //EJ10-modulos
+
+    //You should use this script in html with the type module ,
+    //eg ''<script type="module" src="demo.js"></script>",
+    //open the page in a httpserver,otherwise there will be a CORS policy error.
+    //script demo.js
+
+import { cube, foo, graph } from 'module';
+graph.options = {
+    color:'blue',
+    thickness:'3px'
+};
+graph.draw();
+console.log(cube(3)); // 27
+console.log(foo);    // 4.555806215962888
+
+    //Old sintaxis
+const hello = require('./module');
+
+console.log(hello());
+
+//EJ11
+
+function* nombre(param){
+    yield (1)
+    yield (2)
+    
+    yield ("último valor retornado")
+    }
+    //Crear el generador
+    const generador = nombre()
+    
+    // Invocacioens
+    console.log(generador.next().value);  //primer valor retornado
+    console.log(generador.next().value);  
+    console.log(generador.next().value);  
+    console.log(generador.next().value);  
