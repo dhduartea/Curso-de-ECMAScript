@@ -47,3 +47,11 @@ helloWorld()
 const regexData=/([0-9]{4})-([0-9]{2})-([0-9]{2})/;
 const match=regexData.exec('2022-06-30');
 console.log(match);
+
+    // Como se puede ver nos saltamos el primer espacio ya que lo que nos regresa
+    // dateRegex.exec(dateString) en el indice 0 es justamente el string que le pasamos por parametro
+    // tambien para evitar futuros errores utilizamos el operador || para que si se da el caso en que 
+    // dateRegex.exec(dateString) retorne null no nos de error el querer hacer el destructuring
+const [ , year, month, day] = dateRegex.exec(dateString) || []
+
+console.log(`day: ${day}, month: ${month}, year: ${year}`)
