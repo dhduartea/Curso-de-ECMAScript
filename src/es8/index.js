@@ -6,8 +6,8 @@ const data={
     backend:"Pipe",
     design:"Karen",//,<-- Trailing comma
 }
-const entrie=Object.entries(data);
-console.log(entrie, typeof(entrie),entrie[1], entrie.length);
+const entry=Object.entries(data);
+console.log(entry, typeof(entry),entry[1], entry.length);
 
 //EJ2-values
 

@@ -66,7 +66,7 @@ const user={};
 console.log(user?.profile?.email);
 
 if (user?.profile?.email) {
-    console.log("temos email");
+    console.log("tenemos email");
     
 }else{
     console.log("no hay email");
